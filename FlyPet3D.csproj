@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>FlyPet3D</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>Exe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <StartupObject>FlyPet.Entry</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="FlyPet.Data.classification.csv.gz" />
+    <None Remove="FlyPet.Data.connections_princeton.csv.gz" />
+    <None Remove="FlyPet.Data.consolidated_cell_types.csv.gz" />
+    <None Remove="FlyPet.Data.neurons.csv.gz" />
+    <EmbeddedResource Include="FlyPet.Data.classification.csv.gz" LogicalName="FlyPet.Data.classification.csv.gz" />
+    <EmbeddedResource Include="FlyPet.Data.connections_princeton.csv.gz" LogicalName="FlyPet.Data.connections_princeton.csv.gz" />
+    <EmbeddedResource Include="FlyPet.Data.consolidated_cell_types.csv.gz" LogicalName="FlyPet.Data.consolidated_cell_types.csv.gz" />
+    <EmbeddedResource Include="FlyPet.Data.neurons.csv.gz" LogicalName="FlyPet.Data.neurons.csv.gz" />
+  </ItemGroup>
+</Project>
